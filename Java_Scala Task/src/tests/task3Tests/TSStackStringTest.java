@@ -10,10 +10,13 @@ import java.util.EmptyStackException;
 import static org.junit.Assert.*;
 
 public class TSStackStringTest {
+
     private TSStack<String> stack;
+
     private static String expected3 = new String("test3");
     private static String expected2 = new String("test2");
     private static String expected1 = new String("test1");
+
     @Before
     public void setUp() throws Exception {
         stack = new TSStack<String>(){{
@@ -32,7 +35,6 @@ public class TSStackStringTest {
     public void push() {
         assertTrue(stack.push("one more string"));
     }
-
 
     @Test
     public void peek() {
@@ -53,6 +55,7 @@ public class TSStackStringTest {
         assertSame(expected2, actual2);
         assertSame(expected3, actual3);
     }
+
     @Test(expected = EmptyStackException.class)
     public void pop2() {
         stack.pop();
@@ -76,4 +79,5 @@ public class TSStackStringTest {
         int actual = stack.size();
         assertEquals(expected, actual);
     }
+
 }

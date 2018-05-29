@@ -17,6 +17,7 @@ public class User {
             throw new IncorrectUserNameException();
         }
     }
+
 // Constructor to create user with parameters from DB
     public User(String userName, Integer level, Integer experience, UserSubscriptionType subscriptionType,
                 Integer availableActions, Integer paidDays) throws IncorrectUserNameException {

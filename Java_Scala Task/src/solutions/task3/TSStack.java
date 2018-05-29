@@ -8,9 +8,6 @@ public class TSStack <E> implements StackOperations<E> {
 
     private volatile ArrayList<E> elements = new ArrayList<>();
 
-
-
-
     @Override
     public synchronized boolean push(E element) {
         return elements.add(element);
@@ -34,6 +31,7 @@ public class TSStack <E> implements StackOperations<E> {
     public synchronized boolean isEmpty(){
         return elements.isEmpty();
     }
+
     public synchronized int size(){
         return elements.size();
     }

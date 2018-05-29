@@ -10,13 +10,16 @@ import java.util.EmptyStackException;
 import static org.junit.Assert.*;
 
 public class TSStackIntegerTest {
+
     private TSStack<Integer> stack;
+
     private static Integer expected3 = new Integer(3456);
     private static Integer expected2 = new Integer(4567);
     private static Integer expected1 = new Integer(5896);
+
     @Before
     public void setUp() throws Exception {
-        stack = new TSStack<Integer>(){{
+        stack = new TSStack<Integer>() {{
             push(expected3);
             push(expected2);
             push(expected1);
@@ -32,7 +35,6 @@ public class TSStackIntegerTest {
     public void push() {
         assertTrue(stack.push(5));
     }
-
 
     @Test
     public void peek() {
@@ -54,6 +56,7 @@ public class TSStackIntegerTest {
         assertSame(expected2, actual2);
         assertSame(expected3, actual3);
     }
+
     @Test(expected = EmptyStackException.class)
     public void pop2() {
         stack.pop();
